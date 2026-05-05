@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Inter", "Segoe UI", system-ui, sans-serif;
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #fbfaf7;
+  color: #1f2524;
+  font-family: var(--font-sans);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: #c58a2a;
+  color: #1f2524;
+}
+
+.focus-ring {
+  @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold;
+}
+
+.container-pad {
+  @apply mx-auto max-w-7xl px-5 sm:px-6 lg:px-8;
+}
+
+.section-pad {
+  @apply py-16 sm:py-20 lg:py-24;
+}
+
+.form-control input,
+.form-control select,
+.form-control textarea {
+  @apply w-full rounded-md border border-stone-300 bg-white px-4 py-3 text-base font-medium text-charcoal shadow-sm outline-none transition placeholder:text-stone-400 focus:border-gold focus:ring-4 focus:ring-gold/20;
+}
+
+.form-control textarea {
+  @apply resize-y;
+}
